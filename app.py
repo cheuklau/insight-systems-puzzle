@@ -26,8 +26,7 @@ def success():
     qry = db_session.query(Items)
     results = qry.all()
 
-    return str(results)
+    return render_template('showitems.html', results=results)
   
-
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80)
